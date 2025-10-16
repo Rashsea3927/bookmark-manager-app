@@ -1,0 +1,58 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  /* Border Radius */
+  --radius-10: 0.625rem; /* 10px */
+  --radius-20: 1.25rem; /* 20px */
+  /* Line Height */
+  --line-height-tighter: 1.2;
+  --line-height-tight: 1.3;
+  --line-height-snug: 1.4;
+  --line-height-base: 1.5;
+}
+
+@theme inline {
+  /* Color */
+  --color-neutral-900: var(--neutral-900);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-0: var(--neutral-0);
+  --color-teal-800: var(--teal-800);
+  --color-teal-700: var(--teal-700);
+  --color-red-800: var(--red-800);
+  --color-red-600: var(--red-600);
+}
+
+:root {
+  /* Neutral */
+  --neutral-900: hsl(173, 62%, 5%);
+  --neutral-800: hsl(169, 10%, 33%);
+  --neutral-500: hsl(169, 5%, 56%);
+  --neutral-400: hsl(168, 14%, 78%);
+  --neutral-300: hsl(170, 21%, 89%);
+  --neutral-100: hsl(173, 21%, 93%);
+  --neutral-0: hsl(0, 0%, 100%);
+  /* Teal */
+  --teal-800: hsl(178, 97%, 12%);
+  --teal-700: hsl(178, 98%, 14%);
+  /* Red */
+  --red-800: hsl(2, 96%, 41%);
+  --red-600: hsl(2, 98%, 62%);
+}
+
+.dark {
+  --neutral-900: hsl(180, 100%, 4%);
+  --neutral-800: hsl(178, 100%, 5%);
+  --neutral-600: hsl(178, 100%, 7%);
+  --neutral-500: hsl(179, 100%, 10%);
+  --neutral-400: hsl(179, 100%, 14%);
+  --neutral-300: hsl(179, 100%, 22%);
+  --neutral-100: hsl(180, 5%, 71%);
+}
