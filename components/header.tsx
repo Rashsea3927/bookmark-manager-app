@@ -33,7 +33,7 @@ const Header = () => {
         <SidebarTrigger className='size-10 rounded-lg border border-neutral-400 lg:hidden' />
         <div className='relative w-[193px] md:w-80'>
           <Input
-            className='pl-10 text-sm font-medium text-neutral-800 dark:text-neutral-100 leading-base tracking-normal border-neutral-300 dark:border-neutral-500 bg-neutral-0 dark:bg-neutral-600 md:h-11'
+            className='pl-10 text-sm font-medium text-neutral-800 dark:text-neutral-100 leading-base tracking-normal border-neutral-300 dark:border-neutral-500 bg-neutral-0 dark:bg-neutral-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:focus-visible:outline-neutral-100 md:h-11'
             name='search'
             placeholder='Search by title...'
           />
@@ -41,7 +41,7 @@ const Header = () => {
         </div>
       </div>
       <div className='flex items-center gap-[10px] md:gap-4'>
-        <Button className='w-10 h-10 rounded-lg p-0 bg-teal-700 inset-shadow-add md:w-fit md:h-11 md:px-4 md:py-3'>
+        <Button className='w-10 h-10 rounded-lg p-0 bg-teal-700 inset-shadow-add focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:focus-visible:outline-neutral-100 md:w-fit md:h-11 md:px-4 md:py-3'>
           <IconAdd />
           <span className='hidden text-base text-neutral-0 tracking-normal font-semibold md:inline-block'>
             Add Bookmark
@@ -49,7 +49,7 @@ const Header = () => {
         </Button>
         <Popover>
           <PopoverTrigger asChild>
-            <Button className='p-0 size-10 rounded-full'>
+            <Button className='p-0 size-10 rounded-full focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:focus-visible:outline-neutral-100'>
               <Image src='/assets/image-avatar.webp' width={40} height={40} alt='' />
             </Button>
           </PopoverTrigger>
@@ -76,7 +76,11 @@ const Header = () => {
                   Theme
                 </p>
               </div>
-              <Switch defaultChecked={theme === 'dark'} onCheckedChange={handleThemeChange}>
+              <Switch
+                className='focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:focus-visible:outline-neutral-100'
+                defaultChecked={theme === 'dark'}
+                onCheckedChange={handleThemeChange}
+              >
                 <span className='absolute top-1/2 -translate-y-1/2 left-[10px] z-10 size-[14px]'>
                   <IconLightTheme />
                 </span>
@@ -86,7 +90,10 @@ const Header = () => {
               </Switch>
             </div>
             <div className='py-3 px-4'>
-              <Button variant={'ghost'} className='flex items-center gap-[10px] p-0 cursor-pointer'>
+              <Button
+                variant={'ghost'}
+                className='flex items-center gap-[10px] p-0 cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 dark:focus-visible:outline-neutral-100'
+              >
                 <IconLogout />
                 <p className='text-sm tracking-normal leading-snug font-semibold text-neutral-900 dark:text-neutral-100'>
                   Logout
